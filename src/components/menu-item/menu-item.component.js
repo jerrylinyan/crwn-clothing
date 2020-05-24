@@ -5,7 +5,7 @@ import "./menu-item.style.scss";
 const MenuItem = ({ title, imageUrl, size, linkUrl, match, history }) => (
   <div
     className={`${size} menu-item`}
-    onClick={() => history.push(`${linkUrl}`)}
+    onClick={() => history.push(`${match.url}${linkUrl}`)}
   >
     <div
       className="background-image"
