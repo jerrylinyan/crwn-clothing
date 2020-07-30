@@ -15,6 +15,7 @@ export const selectCollections = createSelector(
   (shop) => shop.collections
 );
 
+//convert object to array
 export const selectCollectionsForPreview = createSelector(
   [selectCollections],
   (collections) =>
@@ -29,3 +30,13 @@ export const selectCollection = (collectionUrlParam) =>
     //   (collection) => collection.id === COLLECTION_ID_MAP[collectionUrlParam]
     // )
   );
+
+export const selectIsCollectionFetching = createSelector(
+  [selectShop],
+  (shop) => shop.isFetching
+);
+
+export const selectIsCollectionsLoaded = createSelector(
+  [selectShop],
+  (shop) => !shop.collections
+);
