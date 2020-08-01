@@ -5,6 +5,17 @@ import { selectCollection } from "../../redux/shop/shop.selectors";
 import "./collection.styles.scss";
 
 const CollectionPage = ({ collection }) => {
+  // useEffect(() => {
+  //   console.log("I am subscribing");
+  //   const unsubscribeFromCollection = firestore
+  //     .collection("collections")
+  //     .onSnapshot((snapShot) => console.log(snapShot));
+  //   //clean up function
+  //   return () => {
+  //     console.log("I am unsubscribing");
+  //     unsubscribeFromCollection();
+  //   };
+  // }, []);
   const { title, items } = collection;
   return (
     <div className="collection-page">
